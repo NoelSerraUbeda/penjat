@@ -1,0 +1,143 @@
+* {
+    font-family: 'Varela Round';
+}
+
+body {
+    text-align: center;
+}
+#tituloaparte{
+    font-size: 60px;
+    text-align: center;
+    font-size: var(--fs-titulo);
+    color: var(--negro);
+    text-shadow: 3px 0 0 var(--blanco), -3px 0 0 var(--blanco), 0 3px 0 var(--blanco), 0 -3px 0 var(--blanco), 2px 2px var(--blanco), -2px -2px 0 var(--blanco), 2px -2px 0 var(--blanco), -2px 2px 0 var(--blanco);
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+.container {
+    /* background-color: red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 650px;
+    margin-bottom: 80px;
+}
+.ventana {
+    background-color: white;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    width: 700px;
+    border: 10px solid #B5B19A;
+    border-radius: 50px;
+    background-image: url(../img/cielo.svg);
+    background-size: cover;
+}
+#globos, #pinguinocayendo
+{
+    /* background-color: yellow; */
+    position: absolute;
+    width: 500px;
+    top: 40px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+#pinguinocayendo {
+    visibility: hidden;
+}
+.explosion {
+    visibility: hidden;
+}
+
+
+#word-container,
+#guess-container {
+    font-size: 60px;
+    margin-top: 100px;
+}
+
+#attempts {
+    font-size: 20px;
+
+}
+
+#message {
+    font-size: 49px;
+    width: 595px;
+    margin-top: 10px;
+}
+
+
+.juego {
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    width: 600px;
+    height: 100%;
+}
+
+#attempts {
+    visibility: hidden;
+}
+#pista {
+    font-size: 35px;
+}
+
+.hidden {
+    animation: slideDown 2s ease;
+    animation-fill-mode: forwards;
+    /* Para mantener el estado final de la animación */
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(100%);
+        visibility: hidden;
+    }
+}
+
+.flotar {
+
+    animation-name: floating;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(0);
+    }
+
+    20% {
+        transform: translateX(-30px);
+    }
+
+    40% {
+        transform: translateY(-40px);
+    }
+
+    60% {
+        transform: translateX(50px);
+    }
+
+    80% {
+        transform: translateY(-50px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+#canvas {
+    position: fixed;
+    bottom: 0;
+}
